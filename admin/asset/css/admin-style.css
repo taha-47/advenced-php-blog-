@@ -1,0 +1,558 @@
+/*
+===============================
+ admin panel main style
+===============================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+}
+
+i {
+    margin: 0 5px;
+}
+
+.modal-alert {
+    color: #d9534f;
+}
+
+
+/*------- Bootstrap editing -------*/
+
+.alert {
+    padding: 7px 15px;
+    margin-bottom: 5px;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+
+/*-------- Start Login page --------*/
+
+.login-page .login-form {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 15px;
+    box-shadow: 0 0px 33px 2px rgba(0, 0, 0, 0.4);
+}
+
+.login-page .form-group {
+    position: relative;
+}
+
+.login-page form input {
+    margin-bottom: 10px
+}
+
+.login-page [data-class="login"].selected {
+    color: #337ab7;
+}
+
+
+/*-------- end Login page --------*/
+
+
+/*-------- Start sidearea --------*/
+
+.side-area {
+    width: 200px;
+    height: 100vh;
+    padding: 56px 0 20px;
+    background-color: #424242;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.side-area li {
+    padding: 0;
+    cursor: pointer;
+}
+
+.side-area .active {
+    background-color: #dc4038;
+    color: #fff;
+}
+
+.side-area ul li.main-list:hover:not(.active) {
+    background-color: #252525;
+}
+
+.side-area ul li:not(.active) a:hover {
+    color: #dc4038
+}
+
+.side-area li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #dedede;
+    padding: 0
+}
+
+.side-area li .admin-menu-name {
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+
+.side-area li.active .admin-menu-name::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    ;
+    border-color: transparent #f1f1f1 transparent transparent;
+    border-style: solid;
+    border-width: 12px;
+}
+
+.side-area li a i {
+    float: left;
+    line-height: 34px;
+    color: inherit;
+    padding: 0 8px;
+}
+
+.side-area li ul {
+    background-color: #505050
+}
+
+.side-area li ul li {
+    padding: 5px 30px
+}
+
+.side-area .open {
+    display: block;
+}
+
+.side-area .close {
+    display: none;
+}
+
+
+/*-------- End sidearea --------*/
+
+
+/*--------page content---------*/
+
+.content-page {
+    margin-left: 200px;
+    padding: 55px 12px 15px;
+    min-height: 100vh;
+}
+
+.admin-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #424242;
+    min-height: 56px;
+    width: 100%;
+    padding: 0 25px;
+    z-index: 99;
+}
+
+.admin-nav h3 {
+    color: #fff;
+    margin-top: 12px;
+}
+
+.admin-nav .nav-profile {
+    width: 160px;
+    max-height: 55px;
+    padding: 5px 10px;
+    float: right;
+    background: #424242;
+}
+
+.admin-nav .c {
+    float: left;
+    margin-left: 7px;
+}
+
+.admin-nav .c p {
+    color: #ff4f46;
+    margin: 0;
+}
+
+.admin-nav .c p:first-child {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.admin-nav img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    float: left;
+}
+
+.admin-nav .dropdown-profile {
+    right: 25px;
+    left: auto;
+    top: 53px;
+}
+
+.admin-nav .dropdown-profile a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-nav .admin-notif {
+    float: right;
+    padding: 17px 10px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.admin-nav .admin-notif .dropdown-menu {
+    min-width: 200px;
+    right: 0;
+    left: auto;
+}
+
+.admin-nav .admin-notif a {
+    color: #fff;
+}
+
+.admin-nav .admin-notif .boll {
+    height: 10px;
+    width: 10px;
+    background: #f00;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.admin-nav .admin-notif i {
+    font-size: 20px;
+}
+
+
+/*-------- Dashboard page -------*/
+
+.dash-status {
+    margin-top: 30px;
+}
+
+.dash-status .stat-card .stat-item {
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ff4f46;
+}
+
+.dash-status .stat-card .pages-num {
+    background-color: #FF983C;
+}
+
+.dash-status .stat-card .blog-num {
+    background-color: #44B55A;
+}
+
+.dash-status .stat-card .comments-num {
+    background-color: #F50E03;
+}
+
+.dash-status .stat-card .users-num {
+    background-color: #9C00D1;
+}
+
+.dash-status .stat-card i {
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    font-size: 80px;
+}
+
+.dash-status .stat-card .info {
+    float: right;
+}
+
+.dash-status .stat-card .info {
+    float: right;
+}
+
+.dash-status .stat-card .info .stat-val {
+    font-size: 50px;
+}
+
+.dash-status .stat-card .info .stat-val a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.latest {
+    margin-top: 40px;
+}
+
+.latest ul {
+    margin-bottom: 0;
+}
+
+.latest .latest-item li {
+    padding: 12px 15px;
+    color: #656565;
+    font-weight: 600;
+}
+
+.latest .latest-item li:nth-child(odd) {
+    background-color: #eee
+}
+
+
+/*-------End Dashboard --------*/
+
+
+/*------general ------------*/
+
+.manage {
+    margin-top: 30px
+}
+
+.manage input[type="text"] {
+    margin-bottom: 5px;
+}
+
+.manage .table {
+    margin-bottom: 0;
+}
+
+.manage .display-item td {
+    position: relative;
+    overflow: hidden;
+}
+
+.manage tr:first-child td {
+    background-color: #414141;
+    color: #fff;
+    font-weight: bold;
+    border-top: none;
+}
+
+.manage td:nth-child(2) {
+    width: 35%;
+}
+
+.manage tr td {
+    text-align: left;
+}
+
+.manage tr:nth-child(even) {
+    background-color: #eee
+}
+
+.manage .display-item img {
+    width: 90px;
+}
+
+.manage .display-item td {
+    padding-bottom: 20px;
+}
+
+.manage .display-item td a {
+    font-weight: bold;
+}
+
+.add-cat .panel-body,
+.seclect-cat .panel-body {
+    padding: 10px
+}
+
+.manage .hidden-btn {
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    transition: all .3s ease-in-out
+}
+
+.manage tr:hover .hidden-btn {
+    left: 10px;
+    bottom: 2px;
+}
+
+.manage tr .btn {
+    padding: 0 2px;
+    font-size: 11px;
+}
+
+
+/*------ Post page------*/
+
+
+/*Tags area*/
+
+.tags-area .added-tags {
+    border: 1px solid #ddd;
+    min-height: 70px;
+    padding: 5px;
+}
+
+.tags-area .added-tags .tags {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 2px 7px;
+    margin: 3px 3px 3px 0;
+    border-radius: 6px;
+}
+
+
+/*-------End Post page---------*/
+
+.seclect-cat .panel-body {
+    height: 150px;
+    overflow: auto;
+}
+
+.manage .btn-add {
+    margin: 10px 0
+}
+
+
+/*-------- Start comments page ----*/
+
+.manamge-comments td:first-child {
+    width: 18%;
+}
+
+
+/*--------End comments page-------*/
+
+
+/*--------User page-------*/
+
+.user-page .item-heading div:nth-child(2) {
+    width: 200px
+}
+
+.user-page .display-item .item-img i {
+    font-size: 30px;
+}
+
+.user-page .display-item .item-img a {
+    font-weight: bold;
+    vertical-align: super;
+}
+
+.user-page .display-item li.item-name {
+    width: 200px
+}
+
+.user-page .display-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+
+/* user profile */
+
+.user-profile-card {
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    background: rgb(244, 92, 67);
+    background: linear-gradient(90deg, rgba(244, 92, 67, 1) 40%, rgba(235, 51, 73, 1) 100%);
+}
+
+.user-profile-card .profile-pic {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.seclect-cat small {
+    color: #8c8c8c;
+    font-style: italic;
+}
+
+
+/*----------- Options page --------------*/
+
+
+/* menu page */
+
+.disabled {
+    background-color: #dcdcdc91;
+    width: 95%;
+    height: 91%;
+    position: absolute;
+    z-index: 999;
+}
+
+.manage-menus {
+    background-color: #fff;
+    padding: 5px 10px;
+    margin: 15px;
+}
+
+.options-page .panel-body {
+    padding: 15px;
+}
+
+.options-page .panel-body .categories-box {
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.options-page .menu {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.form {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.menu-area .menu .menu-list .menu-item {
+    background: #eaeaea;
+    width: 250px;
+    padding: 10px;
+    padding-right: 0;
+    margin: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    color: #585858;
+}
+
+.menu-area .menu .menu-list .menu-item .close {
+    font-size: 15px;
+}
+
+.menu-area .menu .menu-list .alert {
+    margin-top: 5px;
+}
